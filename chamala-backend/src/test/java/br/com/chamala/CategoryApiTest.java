@@ -16,7 +16,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.DockerImageName;
 
 /** Sobe um PostGIS real (Docker), aplica as migrações e testa o primeiro endpoint. */
-@SpringBootTest
+@SpringBootTest(properties = "spring.flyway.enabled=true")
 @AutoConfigureMockMvc
 @Testcontainers
 class CategoryApiTest {
