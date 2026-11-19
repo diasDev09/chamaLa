@@ -30,11 +30,11 @@ class CategoryApiTest {
     MockMvc mvc;
 
     @Test
-    void listaAsOitoCategoriasSemLogin() throws Exception {
+    void listaAsCategoriasSemLogin() throws Exception {
         mvc.perform(get("/api/v1/categories"))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.length()").value(8))
-            .andExpect(jsonPath("$[0].name").value("Limpeza"));
+            .andExpect(jsonPath("$.length()").value(5))
+            .andExpect(jsonPath("$[0].name").value("Geral"));
     }
 
     @Test
